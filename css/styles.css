@@ -597,18 +597,15 @@ header .container {
 }
 
 
+
 .footer-subscribe {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.subscribe-form {
     display: flex;
     align-items: flex-end;
-    height: 80px;
-}
-
-.footer-subscribe {
-    margin-left: 80px;
-}
-
-.subscribe-label {
-    display: inline-block;
 }
 
 .subscribe-label-text {
@@ -622,6 +619,7 @@ header .container {
 }
 
 .subscribe-input {
+    display: block;
     height: 40px;
     width: 264px;
     padding: 8px 16px;
@@ -632,6 +630,11 @@ header .container {
     transition: border 250ms var(--cubic-bezier);
 }
 
+.subscribe-input:focus {
+    border: 1px solid var(--color-cloud);
+    outline: none;
+}
+
 .subscribe-input::placeholder {
     font-size: 12px;
     line-height: 2;
@@ -639,10 +642,6 @@ header .container {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-input:focus {
-    border: 1px solid var(--color-cloud);
-    outline: none;
-}
 
 .subscribe-button {
     display: flex;
@@ -667,7 +666,6 @@ header .container {
 
 .subscribe-svg {
     fill: var(--color-primary);
-    /* margin-left: 16px; */
 }
 
 
@@ -699,7 +697,6 @@ header .container {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    /* height: 579px; */
     background-color: var(--color-cloud);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -775,7 +772,7 @@ header .container {
 }
 
 .modal-input:focus {
-    border: 1px solid #4D5AE5;
+    border: 1px solid var(--color-logo);
     border-radius: 4px;
     outline: none;
 }
@@ -790,7 +787,7 @@ header .container {
 }
 
 .modal-input:focus+.modal-icon {
-    fill: #4D5AE5
+    fill: var(--color-logo);
 }
 
 .modal-textarea {
@@ -799,7 +796,6 @@ header .container {
     height: 120px;
     resize: none;
     padding: 8px 16px;
-    
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border 250ms var(--cubic-bezier)
@@ -858,13 +854,10 @@ header .container {
 }
 
 
-
-
 .modal-checkbox-text {
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.04em;
-
     color: #757575;
 }
 
